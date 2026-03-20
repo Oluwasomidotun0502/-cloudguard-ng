@@ -58,6 +58,9 @@ Anyone can visit the live URL, enter their own AWS credentials, and instantly ge
 ### Step 7 — Final Product (Multi-user Form)
 ![Live Form](images/22-live-for-user.png)
 
+### Step 8 — Live Scan Results
+![Sample Scan](images/23-sample-scan.png)
+
 ---
 
 ## Features
