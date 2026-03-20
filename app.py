@@ -67,4 +67,6 @@ tr:hover{background:#1c2128}
 """, findings=findings, total=total, critical=critical, warnings=warnings, ok=ok, now=now)
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=False, host="0.0.0.0", port=port)
