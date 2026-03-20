@@ -1,0 +1,7 @@
+venv/
+.env
+*.html
+__pycache__/
+*.pyc
+.aws/
+images/
