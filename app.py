@@ -15,25 +15,46 @@ FORM_PAGE = """
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: Arial, sans-serif; background: #0d1117; color: #e6edf3; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; }
 h1 { color: #58a6ff; margin-bottom: 8px; font-size: 2em; text-align: center; }
-.tagline { color: #8b949e; margin-bottom: 40px; text-align: center; font-size: 0.95em; }
-.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 40px; width: 100%; max-width: 480px; }
+.tagline { color: #8b949e; margin-bottom: 30px; text-align: center; font-size: 0.95em; }
+.card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 40px; width: 100%; max-width: 520px; }
 label { display: block; color: #8b949e; font-size: 0.85em; margin-bottom: 6px; margin-top: 20px; }
 input, select { width: 100%; padding: 12px; background: #0d1117; border: 1px solid #30363d; border-radius: 6px; color: #e6edf3; font-size: 0.95em; }
 input:focus, select:focus { outline: none; border-color: #58a6ff; }
 .btn { width: 100%; padding: 14px; background: #238636; color: white; border: none; border-radius: 6px; font-size: 1em; font-weight: bold; cursor: pointer; margin-top: 28px; }
 .btn:hover { background: #2ea043; }
-.warning { background: #161b22; border: 1px solid #f0883e; border-radius: 8px; padding: 14px; margin-bottom: 24px; font-size: 0.85em; color: #f0883e; line-height: 1.6; }
-.warning strong { color: #f0883e; }
+.safe-box { background: #0d1117; border: 1px solid #238636; border-radius: 8px; padding: 16px; margin-bottom: 20px; font-size: 0.85em; line-height: 1.8; color: #8b949e; }
+.safe-box strong { color: #58a6ff; display: block; margin-bottom: 8px; font-size: 0.95em; }
+.safe-box ol { padding-left: 18px; }
+.safe-box ol li { margin-bottom: 4px; }
+.safe-box .highlight { color: #e6edf3; font-weight: bold; }
+.warning-box { background: #0d1117; border: 1px solid #f0883e; border-radius: 8px; padding: 14px; margin-bottom: 20px; font-size: 0.85em; color: #8b949e; line-height: 1.6; }
+.warning-box strong { color: #f0883e; }
+.divider { border: none; border-top: 1px solid #30363d; margin: 20px 0; }
 .footer { margin-top: 30px; color: #8b949e; font-size: 0.8em; text-align: center; }
 </style>
 </head>
 <body>
-<h1>🛡️ CloudGuard NG</h1>
+<h1>CloudGuard NG</h1>
 <p class="tagline">AWS Security Misconfiguration Scanner — Built for African Startups</p>
 <div class="card">
-    <div class="warning">
-        🔒 <strong>Your keys are safe.</strong> They are used only for this scan and are never stored or logged anywhere.
+
+    <div class="safe-box">
+        <strong>New here? Create a safe read-only test user first (2 minutes):</strong>
+        <ol>
+            <li>Go to <span class="highlight">AWS Console → IAM → Users → Create user</span></li>
+            <li>Name it <span class="highlight">cloudguard-test</span></li>
+            <li>Attach these 3 policies: <span class="highlight">SecurityAudit</span>, <span class="highlight">AmazonS3ReadOnlyAccess</span>, <span class="highlight">IAMReadOnlyAccess</span></li>
+            <li>Go to <span class="highlight">Security credentials → Create access key</span></li>
+            <li>Paste the keys below, scan, then <span class="highlight">delete the user</span> after</li>
+        </ol>
     </div>
+
+    <div class="warning-box">
+        <strong>Your keys are safe.</strong> They are used only for this scan and are never stored or logged anywhere. For extra safety, use a read-only IAM user as described above.
+    </div>
+
+    <hr class="divider">
+
     <form method="POST" action="/scan">
         <label>AWS Access Key ID</label>
         <input type="text" name="access_key" placeholder="AKIAIOSFODNN7EXAMPLE" required />
@@ -48,7 +69,7 @@ input:focus, select:focus { outline: none; border-color: #58a6ff; }
             <option value="ap-southeast-1">Asia Pacific (Singapore) — ap-southeast-1</option>
             <option value="af-south-1">Africa (Cape Town) — af-south-1</option>
         </select>
-        <button type="submit" class="btn">🔍 Scan My AWS Account</button>
+        <button type="submit" class="btn">Scan My AWS Account</button>
     </form>
 </div>
 <p class="footer">CloudGuard NG — Built for Nigerian and African cloud security | 3MTT Knowledge Showcase</p>
@@ -88,13 +109,13 @@ tr:hover { background: #1c2128; }
 </style>
 </head>
 <body>
-<h1>🛡️ CloudGuard NG</h1>
+<h1>CloudGuard NG</h1>
 <p class="subtitle">AWS Security Report — Scanned: {{ now }}</p>
 {% if error %}
 <div class="error-box">
-    <h2>❌ Scan Failed</h2>
+    <h2>Scan Failed</h2>
     <p style="margin-top:12px; color:#e6edf3;">{{ error }}</p>
-    <a href="/" class="btn btn-back" style="display:inline-block; margin-top:20px;">← Try Again</a>
+    <a href="/" class="btn btn-back" style="display:inline-block; margin-top:20px;">Try Again</a>
 </div>
 {% else %}
 <div class="summary">
@@ -104,7 +125,7 @@ tr:hover { background: #1c2128; }
     <div class="card"><h2 class="ok">{{ ok }}</h2><p>Passed</p></div>
 </div>
 <div class="actions">
-    <a href="/" class="btn btn-back">← Scan Another Account</a>
+    <a href="/" class="btn btn-back">Scan Another Account</a>
 </div>
 <table>
 <tr><th>Status</th><th>Service</th><th>Resource</th><th>Finding</th><th>Fix</th></tr>
