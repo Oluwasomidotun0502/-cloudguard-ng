@@ -3,7 +3,7 @@
 
 ![CloudGuard NG Live](images/22-live-for-user.png)
 
-> **Live Demo:** [https://cloudguard-ng.onrender.com](https://cloudguard-ng.onrender.com)
+> **Live Demo:** [https://cloudguard-ng.vercel.app](https://cloudguard-ng.vercel.app)
 > *(First load may take 30-60 seconds on free tier — then it runs fast)*
 
 ---
@@ -31,7 +31,7 @@ Anyone can visit the live URL, enter their own AWS credentials, and instantly ge
 
 ## Live Demo
 
-**[https://cloudguard-ng.onrender.com](https://cloudguard-ng.onrender.com)**
+**[https://cloudguard-ng.vercel.app](https://cloudguard-ng.vercel.app)**
 
 ---
 
@@ -52,14 +52,14 @@ Anyone can visit the live URL, enter their own AWS credentials, and instantly ge
 ### Step 5 — First Security Report (HTML)
 ![HTML Report](images/10-html-browser-test.png)
 
-### Step 6 — Live on Render
-![Render Live](images/18-cloudguardng-fully-live.png)
+### Step 6 — Migrated to Vercel (Faster & Always On)
+![Vercel Dashboard](images/26-server-migration.png)
 
-### Step 7 — Final Product (Multi-user Form)
-![Live Form](images/22-live-for-user.png)
+### Step 7 — Final Product Live on Vercel
+![Live Form](images/27-new-server-up.png)
 
-### Step 8 — Live Scan Results
-![Sample Scan](images/23-sample-scan.png)
+### Step 8 — Live Scan Results on Vercel
+![Sample Scan](images/28-scan-result.png)
 
 ---
 
