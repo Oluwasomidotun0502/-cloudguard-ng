@@ -4,7 +4,7 @@
 ![CloudGuard NG Live](images/22-live-for-user.png)
 
 > **Live Demo:** [https://cloudguard-ng.vercel.app](https://cloudguard-ng.vercel.app)
-> *(First load may take 30-60 seconds on free tier — then it runs fast)*
+> *(No cold start — always fast)*
 
 ---
 
@@ -83,7 +83,7 @@ Anyone can visit the live URL, enter their own AWS credentials, and instantly ge
 | Boto3 | AWS SDK — talks to AWS services |
 | Flask | Web framework for the dashboard |
 | Gunicorn | Production web server |
-| Render | Free cloud hosting |
+| Vercel | Free cloud hosting — no cold start |
 | AWS IAM | Security scanning permissions |
 
 ---
