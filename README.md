@@ -56,7 +56,7 @@ Anyone can visit the live URL, enter their own AWS credentials, and instantly ge
 ![Vercel Dashboard](images/26-server-migration.png)
 
 ### Step 7 — Final Product Live on Vercel
-![Live Form](images/22-live-for-user.png)
+![Live Form](images/27-new-server-up.png)
 
 ### Step 8 — Live Scan Results on Vercel
 ![Sample Scan](images/28-scan-result.png)
