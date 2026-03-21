@@ -1,7 +1,7 @@
 # CloudGuard NG
 ### AWS Security Misconfiguration Scanner — Built for African Startups
 
-![CloudGuard NG Live](images/22-live-for-user.png)
+![CloudGuard NG Live](images/27-new-server-up.png)
 
 > **Live Demo:** [https://cloudguard-ng.vercel.app](https://cloudguard-ng.vercel.app)
 > *(No cold start — always fast)*
@@ -56,7 +56,7 @@ Anyone can visit the live URL, enter their own AWS credentials, and instantly ge
 ![Vercel Dashboard](images/26-server-migration.png)
 
 ### Step 7 — Final Product Live on Vercel
-![Live Form](images/27-new-server-up.png)
+![Live Form](images/22-live-for-user.png)
 
 ### Step 8 — Live Scan Results on Vercel
 ![Sample Scan](images/28-scan-result.png)
