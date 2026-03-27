@@ -135,10 +135,9 @@ To scan your AWS account, your IAM user needs these policies:
 
 ## About This Project
 
-Built as part of the **3MTT (3 Million Technical Talent) Knowledge Showcase** — a Nigerian government initiative to develop tech talent across Africa.
 
 CloudGuard NG was created to solve a real problem faced by Nigerian and African startups: **affordable, accessible cloud security auditing.**
 
 ---
 
-*CloudGuard NG — Built for Nigerian and African cloud security | 3MTT Knowledge Showcase*
+*CloudGuard NG by SomiCloud — Cloud Security for Every African Startup*

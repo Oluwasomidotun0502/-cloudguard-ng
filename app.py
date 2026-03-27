@@ -35,7 +35,7 @@ input:focus, select:focus { outline: none; border-color: #58a6ff; }
 </head>
 <body>
 <h1>CloudGuard NG</h1>
-<p class="tagline">AWS Security Misconfiguration Scanner — Built for African Startups</p>
+<p class="tagline">AWS Security Misconfiguration Scanner — by SomiCloud</p>
 <div class="card">
 
     <div class="safe-box">
@@ -72,7 +72,7 @@ input:focus, select:focus { outline: none; border-color: #58a6ff; }
         <button type="submit" class="btn">Scan My AWS Account</button>
     </form>
 </div>
-<p class="footer">CloudGuard NG — Built for Nigerian and African cloud security | 3MTT Knowledge Showcase</p>
+<p class="footer">CloudGuard NG by SomiCloud — Cloud Security for Every African Startup</p>
 </body>
 </html>
 """
@@ -140,7 +140,7 @@ tr:hover { background: #1c2128; }
 {% endfor %}
 </table>
 {% endif %}
-<p class="footer">CloudGuard NG — Built for Nigerian and African cloud security | 3MTT Knowledge Showcase</p>
+<p class="footer">CloudGuard NG by SomiCloud — Cloud Security for Every African Startup</p>
 </body>
 </html>
 """
